@@ -1,12 +1,14 @@
 package com.assignment1.Question7;
 
 public class Complex {
+    // MARK: Private instance variables
     private double imaginary;
     private double real;
 
+    // MARK: Private object variables
     private static int count = 0;
 
-    // Initializers
+    // MARK: Initializers
     public Complex(double imaginary, double real) {
         this.imaginary = imaginary;
         this.real = real;
@@ -14,17 +16,14 @@ public class Complex {
     }
 
     public Complex(double imaginary) {
-        this.imaginary = imaginary;
-        this.real = 0.0;
-        count++;
+        this(imaginary, 0.0);
     }
 
     public Complex(){
-        this.imaginary = 0.0;
-        this.real = 0.0;
-        count++;
+        this(0.0, 0.0);
     }
 
+    // MARK: Instance Getters
     public double getReal() {
         return this.real;
     }
@@ -33,12 +32,12 @@ public class Complex {
         return this.imaginary;
     }
 
-    // Getters
+    // MARK: Object Getters
     public static int getCount() {
         return count;
     }
 
-    // Mutators
+    // MARK: Mutators
     public void setReal(double r) {
         this.real = r;
     }
@@ -47,7 +46,9 @@ public class Complex {
         this.imaginary = i;
     }
 
-    // Object methods
+    // MARK: Instance methods
+
+    // Add a complex number object to a complex number object, returning a new complex object
     public Complex plus(Complex c) {
         Complex n = new Complex();
         n.imaginary = this.imaginary + c.imaginary;
@@ -55,6 +56,7 @@ public class Complex {
         return n;
     }
 
+    // Subtract a complex number by a complex number, returning a new complex object
     public Complex minus(Complex c) {
         Complex n = new Complex();
         n.imaginary = this.imaginary - c.imaginary;
@@ -62,48 +64,40 @@ public class Complex {
         return n;
     }
 
+    // Multiply a complex number object by a complex number object
     public Complex times(Complex z) {
         Complex n = new Complex();
 
         // FOIL
-        double realOne = this.real * z.real;
-        double imaginaryOne = this.real * z.imaginary;
-        double imaginaryTwo = this.imaginary * z.real;
-        double imaginaryThree = this.imaginary * z.imaginary;
+        double r1 = this.real * z.real;
+        double i1 = this.real * z.imaginary;
+        double i2 = this.imaginary * z.real;
+        double i3 = this.imaginary * z.imaginary;
         // i2 = -1
-        double realTwo = imaginaryThree * -1;
+        double r2 = i3 * -1;
 
-        n.imaginary = (imaginaryOne + imaginaryTwo);
-        n.real = (realOne + realTwo);
+        n.imaginary = (i1 + i2);
+        n.real = (r1 + r2);
 
         return n;
     }
 
+    // Multiply the imaginary and real numbers by a double 'a'
     public Complex times(double a) {
         Complex n = new Complex();
 
-        // FOIL
-        double realOne = this.real * a;
-        double imaginaryOne = this.real * a;
-        double imaginaryTwo = this.imaginary * a;
-        double imaginaryThree = this.imaginary * a;
-        // i2 = -1
-        double realTwo = imaginaryThree * -1;
-
-        n.imaginary = (imaginaryOne + imaginaryTwo);
-        n.real = (realOne + realTwo);
+        n.imaginary = this.real * a;
+        n.real = this.real * a;
 
         return n;
     }
 
+    // Compute the magnitude (distance from the origin) of complex number c
     public static double magnitude(Complex c) {
-        return Math.abs(c.imaginary) + c.real;
+        return Math.sqrt(Math.pow(c.real, 2) + Math.pow(c.imaginary, 2));
     }
 
-    public boolean equals(Complex c) {
-        return this.imaginary == c.imaginary && this.real == c.real;
-    }
-
+    // Outputs a complex number object into a human readable string.
     public String toString() {
         String s;
         if (imaginary == 0.0)
@@ -116,4 +110,12 @@ public class Complex {
             s = real + " + " + imaginary + "i";
         return s;
     }
+
+    // MARK: Object methods
+
+    // Compare the equality of a complex number with the complex number C
+    public boolean equals(Complex c) {
+        return this.imaginary == c.imaginary && this.real == c.real;
+    }
+
 }
