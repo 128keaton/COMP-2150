@@ -11,7 +11,7 @@ public class Question3 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Input a series of non-negative digits to reverse (no spaces, max 9): ");
+        System.out.print("Input a series of non-negative digits to reverse (no spaces, max 9, no digit greater than 9): ");
         reverseAndPrint(scanner.nextInt());
 
 
