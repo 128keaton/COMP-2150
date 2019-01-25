@@ -1,13 +1,18 @@
+// kbrleson
+// kbrleson@memphis.edu
+// Jan 25th, 2019
+
 package com.assignment1;
 
 import java.util.Scanner;
 
 public class Question3 {
-    private static final Scanner SCNR = new Scanner(System.in);
     // The assignment wasn't 100% clear, so I did an example plus an input method
     public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
         System.out.print("Input a series of non-negative digits to reverse (no spaces, max 9): ");
-        reverseAndPrint(SCNR.nextInt());
+        reverseAndPrint(scanner.nextInt());
 
 
         System.out.println("\nExample from assignment: ");
@@ -34,5 +39,6 @@ public class Question3 {
         for(int i : digits){
             System.out.print(i + " ");
         }
+        System.out.println();
     }
 }

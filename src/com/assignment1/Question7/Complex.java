@@ -1,3 +1,8 @@
+
+// kbrleson
+// kbrleson@memphis.edu
+// Jan 25th, 2019
+
 package com.assignment1.Question7;
 
 public class Complex {

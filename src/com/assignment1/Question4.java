@@ -1,3 +1,7 @@
+// kbrleson
+// kbrleson@memphis.edu
+// Jan 25th, 2019
+
 package com.assignment1;
 
 import java.util.Arrays;
