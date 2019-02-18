@@ -14,7 +14,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @param color
      * @param filled
      */
@@ -23,7 +22,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @param width
      * @param length
      */
@@ -34,18 +32,15 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
-     * @param area
+     * @param whatDoesThisVariableNeedToBe
      * @param color
      * @param filled
      */
-    Rectangle(double area, String color, boolean filled) {
+    Rectangle(double whatDoesThisVariableNeedToBe, String color, boolean filled) {
         super(color, filled);
-
     }
 
     /**
-     *
      * @param length
      * @param width
      * @param color
@@ -53,10 +48,11 @@ public class Rectangle extends Shape {
      */
     Rectangle(double length, double width, String color, boolean filled) {
         super(color, filled);
+        this.length = length;
+        this.width = width;
     }
 
     /**
-     *
      * @return
      */
     public double getWidth() {
@@ -64,7 +60,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @param width
      */
     public void setWidth(double width) {
@@ -72,7 +67,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @return
      */
     public double getLength() {
@@ -80,7 +74,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @param length
      */
     public void setLength(double length) {
@@ -88,7 +81,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @return
      */
     public double getArea() {
@@ -96,7 +88,6 @@ public class Rectangle extends Shape {
     }
 
     /**
-     *
      * @return
      */
     public double getParameter() {

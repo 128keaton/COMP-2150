@@ -5,52 +5,49 @@ public class Square extends Rectangle {
     /**
      *
      */
-    Square(){
-
+    Square() {
+        super();
     }
 
     /**
-     *
-     * @param area
+     * @param side
      */
-    Square(double area){
-
+    Square(double side) {
+        super();
+        this.setSide(side);
     }
 
     /**
-     *
-     * @param area
+     * @param side
      * @param color
      * @param filled
      */
-    Square(double area, String color, boolean filled){
-
-
+    Square(double side, String color, boolean filled) {
+        this(side);
+        this.setColor(color);
+        this.setFilled(filled);
     }
 
     /**
-     *
      * @return
      */
-    public double getSide(){
-
-    }
-
-    @Override
-    public double getArea() {
-        return super.getArea();
+    public double getSide() {
+        return Math.sqrt(this.getArea());
     }
 
     /**
-     *
      * @param side
      */
-    public void setSide(double side){
-
+    public void setSide(double side) {
+        this.setLength(side);
+        this.setWidth(side);
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        String returnedString = String.format("Square (%.2f) Area = %.2f perimeter is %.2f", this.getSide(), this.getArea(), this.getParameter());
+        returnedString += "\n color is " + this.getColor();
+        returnedString += "\n filled is " + this.isFilled();
+        return returnedString;
     }
 }
