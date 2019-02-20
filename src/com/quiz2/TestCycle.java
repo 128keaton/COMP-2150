@@ -1,17 +1,17 @@
 package com.quiz2;
 
 public class TestCycle {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Cycle C = new Cycle();
         Cycle.ride(C);
 
-        Unicycle U = new Unicycle();
-        Unicycle.ride(U);
+        C = new Unicycle();
+        Cycle.ride(C);
 
-        Bicycle B = new Bicycle();
-        Bicycle.ride(B);
+        C = new Bicycle();
+        Cycle.ride(C);
 
-        Tricycle T = new Tricycle();
-        Tricycle.ride(T);
+        C = new Tricycle();
+        Cycle.ride(C);
     }
 }
