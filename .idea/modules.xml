@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignments/Assignment1/Assignment1.iml" filepath="$PROJECT_DIR$/Assignments/Assignment1/Assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignments/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignments/Assignment2/Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignments/Assignment3/Assignment3.iml" filepath="$PROJECT_DIR$/Assignments/Assignment3/Assignment3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignments/Assignment4/Assignment4.iml" filepath="$PROJECT_DIR$/Assignments/Assignment4/Assignment4.iml" />
       <module fileurl="file://$PROJECT_DIR$/COMP-2150.iml" filepath="$PROJECT_DIR$/COMP-2150.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Submission/Submission.iml" filepath="$PROJECT_DIR$/Submission/Submission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quizzes/Quiz1/Quiz2.iml" filepath="$PROJECT_DIR$/Quizzes/Quiz1/Quiz2.iml" />
     </modules>
   </component>
 </project>
